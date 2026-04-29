@@ -1,0 +1,53 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  background: black;
+  overflow: hidden;
+  height: 100%;
+  font-family: "Courier New", monospace;
+}
+
+#matrixCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#heartMessage {
+  position: absolute;
+  width: 100%;
+  top: 40%;
+  text-align: center;
+  font-size: 26px;
+  color: pink;
+  font-weight: bold;
+  opacity: 0;
+  animation: appearHeart 3s ease-in-out 2s forwards, pulse 2s infinite 5s;
+  text-shadow: 0 0 15px #ff8fdf;
+}
+
+@keyframes appearHeart {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
